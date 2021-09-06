@@ -21,9 +21,15 @@ const navbar = ()=>{
         <a className="nav-link" href="#">Movies</a>
         <a className="nav-link" href="#">About us</a>
         <a className="nav-link" href="#">Contact</a>
+
       </div>
+      <Link to ='/'>
+      <img src='./imagenes/carrito-de-compras.png' width='40' />
+      </Link>
+
     </div>
   </div>
+
 </nav>
 
         </div>

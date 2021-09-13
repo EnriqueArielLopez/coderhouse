@@ -3,6 +3,9 @@ import Cardwidget from './cardWidget';
 class Navbar extends Component {
 
   render() { 
+
+    // Esto es el navbar
+
     return ( <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
     <div className="container-fluid">
   <img src='./imagenes/palomitas-de-maiz.png' alt='logo' width='50'/>
@@ -17,7 +20,11 @@ class Navbar extends Component {
           <a className="nav-link" href="#">About us</a>
           <a className="nav-link" href="#">Contact</a>
         </div>
+
+{/* Esta parte es del carrito (logo)*/}
   <Cardwidget/>
+
+
       </div>
     </div>
   </nav>);

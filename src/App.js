@@ -1,12 +1,25 @@
+import { useState } from 'react';
 import './App.css';
-import React , {Component} from 'react';
 import Navbar from './components/Navbar'
+import Counter from './components/Counter'
 
-class App extends React.Component {
-  render() { 
-    return <Navbar/>
-  };
+const App = () => {
+  const [count, setCount] = useState(0);
+
+
+  return (
+    <div className="App">
+      <header>
+        <Navbar valor={count} />
+
+
+      </header>
+
+      <Counter valor = {count} funcion={setCount}/>
+
+    </div>
+
+  );
+
 }
- 
-
 export default App;

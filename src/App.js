@@ -1,25 +1,45 @@
-import { useState } from 'react';
-import './App.css';
-import Navbar from './components/Navbar'
-import Counter from './components/Counter'
-
+import React, { Component, Fragment,useState } from 'react';
+import Movie from "./components/Movie"
+import Cart from "./components/Cart"
+import Nav from "./components/Nav"
 const App = () => {
-  const [count, setCount] = useState(0);
 
+  // Estado de las peliculas con listados
+
+  const [movies,setMovies] = useState([
+        {id: 1 , name:'Avengers', description : 'accion'},
+        {id: 2 , name:'Narnia', description : 'Fantasia'},
+        {id: 3 , name:'The Simpsons', description : 'Humor'},
+        
+        ])
+
+        // Estado del carrito de peliculas
+        const [cart,setCart]= useState([]);
 
   return (
-    <div className="App">
-      <header>
-        <Navbar valor={count} />
 
+<Fragment>
+<Nav/>
 
-      </header>
+<h3>Movies</h3>
+{movies.map((movie)=>(
+<Movie
 
-      <Counter valor = {count} funcion={setCount}/>
+key = {movie.id}
+movie = {movie}
+cart ={cart}
+setCart={setCart}
+movies={movies}
+/>
+))}
 
-    </div>
+<Cart
+cart={cart}
+setCart={setCart}
 
+/>
+
+</Fragment>
   );
-
 }
 export default App;
